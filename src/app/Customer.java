@@ -1,7 +1,5 @@
 package app;
 
-import app.utils.PhoneFormatter;
-
 import static app.utils.PhoneFormatter.formatPhone;
 
 public class Customer {
