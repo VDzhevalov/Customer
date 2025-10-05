@@ -7,7 +7,7 @@ public class PhoneFormatter {
         String digits = cleanPhone(input);
 
         if (validatePhone(digits)) {
-            return "Невірний номер: має бути рівно 10 цифр, а зараз " + digits.length();
+            return String.format("Невірний номер: має бути рівно 10 цифр, а зараз %d: %s", digits.length(), digits) ;
         }
 
         return formatPhoneNumber(digits);
