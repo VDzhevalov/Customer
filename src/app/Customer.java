@@ -1,5 +1,9 @@
 package app;
 
+import app.utils.PhoneFormatter;
+
+import static app.utils.PhoneFormatter.formatPhone;
+
 public class Customer {
 
     //прибрав final бо на мою думку ім'я та телефон мають мати можливість бути змінені.
@@ -20,7 +24,7 @@ public class Customer {
     }
 
     public String getPhone() {
-        return phone;
+        return formatPhone(phone);
     }
 
     public void setPhone(String phone) {
