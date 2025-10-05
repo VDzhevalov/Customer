@@ -7,14 +7,16 @@ public class PhoneFormatter {
         String digits = cleanPhone(input);
 
         if (validatePhone(digits)) {
-            return String.format("Невірний номер: має бути рівно 10 цифр, а зараз %d: %s", digits.length(), digits) ;
+            throw new IllegalArgumentException(
+                    String.format("Невірний номер: має бути рівно 10 цифр, а зараз %d: %s", digits.length(), digits)
+            );
         }
 
         return formatPhoneNumber(digits);
     }
 
     private static String cleanPhone(String phone) {
-         return phone.replaceAll("\\D", "");
+        return phone.replaceAll("\\D", "");
     }
 
     private static boolean validatePhone(String phone) {
