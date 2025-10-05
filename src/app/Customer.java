@@ -12,7 +12,7 @@ public class Customer {
 
     public Customer(String name, String phone) {
         this.name = name;
-        this.phone = phone;
+        this.phone = formatPhone(phone);
     }
 
     public String getName() {
@@ -24,10 +24,10 @@ public class Customer {
     }
 
     public String getPhone() {
-        return formatPhone(phone);
+        return phone;
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        this.phone = formatPhone(phone);
     }
 }
